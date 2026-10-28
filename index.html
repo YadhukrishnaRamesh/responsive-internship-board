@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore beginner-friendly internships across technology, design, and business.">
+  <title>InternshipHub — Find your next opportunity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to internship listings</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#" aria-label="InternshipHub home">
+        <span class="brand-mark" aria-hidden="true">ih</span>
+        <span>internship<span class="brand-accent">hub</span></span>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link active" href="#opportunities">Explore internships</a>
+        <a class="nav-link" href="#about">About</a>
+      </div>
+      <a class="nav-cta" href="#opportunities">Find an internship <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="hero-orb orb-one" aria-hidden="true"></div>
+      <div class="hero-orb orb-two" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR CAREER STARTS HERE</p>
+          <h1>Small steps.<br><span>Big beginnings.</span></h1>
+          <p class="hero-description">Discover internships that help you learn real skills, build confidence, and take the next step in your career.</p>
+          <a class="hero-button" href="#opportunities">Explore opportunities <span aria-hidden="true">→</span></a>
+          <div class="hero-proof">
+            <div class="avatar-stack" aria-hidden="true"><span>R</span><span>A</span><span>M</span><span>+</span></div>
+            <p><strong>Start learning by doing.</strong><br><span>Opportunities for curious minds</span></p>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Illustration of an internship opportunity card">
+          <div class="visual-grid" aria-hidden="true"></div>
+          <div class="floating-chip chip-top"><span class="chip-icon purple">✦</span> Learn by doing</div>
+          <div class="feature-card">
+            <div class="feature-card-top"><span class="company-symbol">✳</span><span class="featured-label">FEATURED</span></div>
+            <p class="feature-company">Northstar Labs</p>
+            <h2>Frontend Developer Intern</h2>
+            <div class="feature-tags"><span>Remote</span><span>3 months</span></div>
+            <div class="feature-divider"></div>
+            <div class="feature-bottom"><span class="mini-avatars" aria-hidden="true">● ● ●</span><span>Build something meaningful <b>↗</b></span></div>
+          </div>
+          <div class="floating-chip chip-bottom"><span class="chip-icon green">✓</span> Your next chapter</div>
+          <div class="decor-star star-one" aria-hidden="true">✳</div>
+          <div class="decor-star star-two" aria-hidden="true">✦</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-strip" aria-label="Board highlights">
+      <div class="container stats-grid">
+        <div><strong>12</strong><span>Sample opportunities</span></div>
+        <div><strong>06</strong><span>Career domains</span></div>
+        <div><strong>100%</strong><span>Beginner-friendly demo</span></div>
+      </div>
+    </section>
+
+    <section class="opportunities section-space" id="opportunities">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">FIND YOUR FIT</p>
+            <h2>Explore opportunities<span class="heading-period">.</span></h2>
+            <p class="section-description">A starting point for your next big thing. Search, filter, and find a role that matches your interests.</p>
+          </div>
+          <div class="results-bubble" aria-live="polite"><span class="results-dot"></span><span id="results-count">12 opportunities</span></div>
+        </div>
+
+        <form class="filter-panel" id="filter-form" role="search">
+          <div class="search-field">
+            <label for="search-input">Search internships</label>
+            <div class="input-wrap"><span class="search-icon" aria-hidden="true">⌕</span><input id="search-input" name="search" type="search" placeholder="Try “Python” or “remote”" autocomplete="off"><button id="clear-search" class="clear-search" type="button" aria-label="Clear search" hidden>×</button></div>
+          </div>
+          <div class="select-field">
+            <label for="domain-filter">Domain</label>
+            <select id="domain-filter" name="domain">
+              <option value="all">All domains</option>
+              <option value="Web Development">Web Development</option>
+              <option value="Python Development">Python Development</option>
+              <option value="AI / ML">AI / ML</option>
+              <option value="UI / UX Design">UI / UX Design</option>
+              <option value="Cybersecurity">Cybersecurity</option>
+              <option value="Data Analytics">Data Analytics</option>
+            </select>
+          </div>
+          <div class="select-field location-field">
+            <label for="location-filter">Work mode</label>
+            <select id="location-filter" name="location">
+              <option value="all">Any work mode</option>
+              <option value="Remote">Remote</option>
+              <option value="Hybrid">Hybrid</option>
+              <option value="On-site">On-site</option>
+            </select>
+          </div>
+          <button class="reset-button" id="reset-filters" type="button">Reset filters <span aria-hidden="true">↺</span></button>
+        </form>
+
+        <div class="listing-meta"><p id="listing-message">Showing all opportunities</p><span class="sort-note">Curated for early-career learners</span></div>
+        <div id="internship-grid" class="internship-grid" aria-label="Internship results">
+          <div class="loading-state">Loading opportunities…</div>
+        </div>
+        <div id="empty-state" class="empty-state" hidden>
+          <div class="empty-icon" aria-hidden="true">⌕</div>
+          <h3>No matching internships</h3>
+          <p>Try another keyword or change your filters to see more opportunities.</p>
+          <button class="hero-button small-button" id="empty-reset" type="button">Clear all filters</button>
+        </div>
+        <p id="error-state" class="error-state" role="alert" hidden>Something went wrong while displaying internships. Please refresh the page and try again.</p>
+        <p class="demo-note"><span aria-hidden="true">ⓘ</span> Demo project: these are sample listings created for this internship task. Always verify opportunities before applying.</p>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="container about-inner">
+        <div class="about-icon" aria-hidden="true">✳</div>
+        <div><p class="eyebrow">MADE FOR YOUR FIRST STEP</p><h2>Experience grows when you begin.</h2><p>This internship board is a simple, accessible way to explore sample roles and practise finding opportunities that fit your goals.</p></div>
+        <a href="#opportunities" class="about-link">Back to listings <span aria-hidden="true">↑</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner"><a class="brand footer-brand" href="#"><span class="brand-mark" aria-hidden="true">ih</span><span>internship<span class="brand-accent">hub</span></span></a><p>Designed with curiosity. Built for the next step.</p><span>© 2026 InternshipHub · Demo project</span></div>
+  </footer>
+</body>
+</html>
